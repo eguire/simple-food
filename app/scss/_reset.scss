@@ -21,8 +21,13 @@ li {
 }
 
 ul,
-ol {
+ol,
+input {
 	padding: 0;
+}
+
+ul {
+	list-style: none;
 }
 
 input,
@@ -33,5 +38,15 @@ select {
 }
 
 a {
+	display: inline-block;
 	text-decoration: none;
+	color: inherit;
+}
+
+button {
+	display: inline-block;
+	appearance: none;
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
 }
