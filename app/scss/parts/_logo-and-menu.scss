@@ -1,0 +1,59 @@
+.logo {
+	line-height: 0;
+	border-radius: 5px;
+	transition: box-shadow 0.25s ease-in-out, opacity 0.25s ease-in-out;
+	outline: 0;
+	&:focus {
+		box-shadow: $outline;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+	&:active {
+		opacity: 0.5;
+		box-shadow: none;
+	}
+}
+
+.menu {
+	&__logo {
+		margin-right: auto;
+		margin-left: 5px;
+	}
+
+	&__list {
+		display: flex;
+		margin-right: 50px;
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 45px;
+	}
+
+	&__link {
+		font-size: 18px;
+		line-height: 1.2;
+		border-radius: 5px;
+		transition: box-shadow 0.25s ease-in-out, color 0.25s ease-in-out, text-shadow 0.25s ease-in-out;
+		outline: 0;
+		&:focus {
+			box-shadow: $outline;
+		}
+
+		&:hover {
+			color: $orange-900;
+		}
+
+		&:active {
+			text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+			color: $dark;
+			box-shadow: none;
+		}
+
+		&--active {
+			color: $orange-900;
+		}
+	}
+}

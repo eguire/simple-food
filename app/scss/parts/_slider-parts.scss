@@ -1,0 +1,114 @@
+.slick-dots {
+	position: absolute;
+	display: flex;
+	bottom: 9px;
+	left: 50%;
+	transform: translateX(-50%);
+	li:not(:last-child) {
+		margin-right: 15px;
+	}
+
+	li {
+		line-height: 0;
+	}
+
+	button {
+		width: 15px;
+		height: 15px;
+		background-color: $gray;
+		border-radius: 50%;
+		font-size: 0;
+		line-height: 1;
+		transition: box-shadow 0.25s ease-in-out, background-color 0.25s linear;
+		&:focus {
+			box-shadow: $outline;
+		}
+
+		&:hover {
+			background-color: $active-bg;
+			box-shadow: 0 0 0 2px rgba(255, 122, 80, 0.7);
+		}
+
+		&:active {
+			background-color: #FFAE94;
+			box-shadow: none;
+		}
+	}
+}
+
+.slick-active {
+	button {
+		background-color: $orange-900;
+	}
+}
+
+.slick-arrow {
+	position: absolute;
+}
+
+.slider-nav {
+	width: 40px;
+	height: 40px;
+	border: 3px solid $gray;
+	border-radius: 50%;
+	bottom: -3px;
+	transition: border-color 0.25s linear, background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+	&::before {
+		position: absolute;
+		content: "";
+		width: 10px;
+		height: 18px;
+		top: 8px;
+		@extend %pseudo-mask;
+		-webkit-mask-size: cover;
+		background-color: $gray;
+		transition: background-color 0.25s linear;
+	}
+
+	&:focus {
+		box-shadow: $outline;
+	}
+
+	&:hover {
+		background-color: $active-bg;
+		border-color: #FFAE94;
+	}
+
+	&:hover::before {
+		background-color: #FFAE94;
+	}
+
+	&:active {
+		border-color: $focus-bg;
+		background-color: $focus-bg;
+	}
+
+	&:active::before {
+		background-color: $orange-500;
+	}
+
+	&__prev::before {
+		-webkit-mask-image: url(../images/sprite.svg#icon-left);
+		left: 11px;
+	}
+
+	&__next::before {
+		-webkit-mask-image: url(../images/sprite.svg#icon-right);
+		left: 13px;
+	}
+
+	&__prev {
+		left: calc(50% - 113px);
+	}
+
+	&__next {
+		right: calc(50% - 113px);
+	}
+
+	&.slick-disabled {
+		border-color: $orange-500;
+		&::before {
+			background-color: $orange-500;
+		}
+	}
+}

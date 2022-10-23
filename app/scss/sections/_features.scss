@@ -1,0 +1,65 @@
+.features {
+	&__wrapper {
+		padding: 57px 70px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: 67px;
+	}
+
+	&__content {
+		max-width: 470px;
+		margin-left: auto;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		opacity: 0.9;
+		margin-bottom: 30px;
+	}
+
+	&__list {
+		margin-bottom: 30px;
+	}
+
+	&__item:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	&__item {
+		position: relative;
+		padding-left: 64px;
+		font-size: 24px;
+		&::before {
+			position: absolute;
+			content: "";
+			top: -2px;
+			left: 0;
+			width: 34px;
+			height: 34px;
+			@extend %pseudo-mask;
+		}
+
+		&--delivery::before {
+			-webkit-mask-image: url(../images/sprite.svg#icon-timer);
+			background-color: $orange-900;
+		}
+
+		&--couriers::before {
+			-webkit-mask-image: url(../images/sprite.svg#icon-delivery);
+			background-color: #00AAFF;
+		}
+
+		&--restaurans::before {
+			-webkit-mask-image: url(../images/sprite.svg#icon-restorant);
+			background-color: #FF2222;
+		}
+	}
+
+	&__btn {
+		padding: 12px 32px;
+		font-size: 18px;
+	}
+}

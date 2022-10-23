@@ -1,0 +1,46 @@
+.download {
+	padding-bottom: 128px;
+	&__wrapper {
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: right;
+		padding: 42px 0;
+	}
+
+	&__content {
+		max-width: 540px;
+		width: 100%;
+	}
+
+	&__text {
+		margin-bottom: 30px;
+	}
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		line-height: 0;
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 30px;
+	}
+
+	&__link {
+		border-radius: 7px;
+		height: 40px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		&--astore {
+			background-image: url(../images/download-in-as.jpg);
+			width: 120px;
+		}
+
+		&--gplay {
+			background-image: url(../images/download-in-gp.jpg);
+			width: 135px;
+		}
+	}
+}

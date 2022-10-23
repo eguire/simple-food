@@ -16,13 +16,16 @@ h4,
 p,
 ul,
 ol,
-li {
+li,
+figure,
+blockquote {
 	margin: 0;
 }
 
 ul,
 ol,
-input {
+input,
+button {
 	padding: 0;
 }
 
@@ -46,6 +49,7 @@ a {
 button {
 	display: inline-block;
 	appearance: none;
+	color: inherit;
 	border: 0;
 	background-color: transparent;
 	cursor: pointer;
