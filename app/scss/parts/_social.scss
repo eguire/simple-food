@@ -5,24 +5,43 @@
 	}
 
 	&__link {
-		position: relative;
-		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: 39px;
 		height: 38px;
 		border-radius: 50%;
-		background-repeat: no-repeat;
-		background-size: 20px;
-		background-position: center;
-		&::before {
-			position: absolute;
-			content: "";
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			z-index: -1;
-			background-color: $silver-200;
-			border-radius: 50%;
+		background-color: $silver-200;
+		transition: box-shadow 0.25s ease-in-out, background-color 0.25s linear;
+		outline: 0;
+		&:focus {
+			box-shadow: $outline;
+			background-color: $focus-bg;
 		}
+
+		&:hover {
+			box-shadow: none;
+			background-color: $orange-500;
+		}
+
+		&:hover .social__icon {
+			background-color: $white;
+		}
+
+		&:active {
+			background-color: $focus-bg;
+		}
+
+		&:active .social__icon {
+			background-color: $orange-500;
+		}
+	}
+
+	&__icon {
+		background-color: $dark;
+		width: 19px;
+		height: 19px;
+		display: block;
+		transition: background-color 0.25s linear;
 	}
 }

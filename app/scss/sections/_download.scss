@@ -33,6 +33,8 @@
 		height: 40px;
 		background-size: contain;
 		background-repeat: no-repeat;
+		outline: 0;
+		transition: box-shadow 0.25s ease-in-out;
 		&--astore {
 			background-image: url(../images/download-in-as.jpg);
 			width: 120px;
@@ -41,6 +43,10 @@
 		&--gplay {
 			background-image: url(../images/download-in-gp.jpg);
 			width: 135px;
+		}
+
+		&:focus {
+			box-shadow: $outline;
 		}
 	}
 }

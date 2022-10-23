@@ -15,6 +15,15 @@
 		box-shadow: 0 0 0 1px $orange-900;
 	}
 
+	&__link {
+		outline: 0;
+		border-radius: 5px;
+		transition: box-shadow 0.25s ease-in-out;
+		&:focus {
+			box-shadow: $outline;
+		}
+	}
+
 	&__name {
 		font-weight: 400;
 		font-size: 15px;
