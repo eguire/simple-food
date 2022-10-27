@@ -1,7 +1,9 @@
 .social {
 	display: flex;
-	&__item:not(:last-child) {
-		margin-right: 13px;
+	&__item {
+		&:not(:last-child) {
+			margin-right: 13px;
+		}
 	}
 
 	&__link {

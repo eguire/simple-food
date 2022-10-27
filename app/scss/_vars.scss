@@ -1,8 +1,5 @@
-%pseudo-mask {
-	mask-size: contain;
-	mask-repeat: no-repeat;
-	mask-position: center;
-}
+
+$outline: 0 0 0 2px rgba(255, 104, 56, 0.7);
 
 $black: #000000;
 
@@ -11,8 +8,6 @@ $white: #ffffff;
 $focus-bg: rgba(255, 122, 80, 0.1);
 
 $active-bg: #fff2ed;
-
-$outline: 0 0 0 2px rgba(255, 104, 56, 0.7);
 
 $orange-900: #ff6838;
 
@@ -27,3 +22,11 @@ $dark-blue: #363853;
 $dark: #31352b;
 
 $silver-100: #f9faff;
+
+$dt: 1200;
+
+$tl2: 992;
+
+$tl: 768;
+
+$pn: 560;

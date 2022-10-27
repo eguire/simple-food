@@ -1,6 +1,7 @@
 @import 'reset';
 @import '../../node_modules/slick-carousel/slick/slick';
 @import 'fonts';
+@import 'mixins';
 @import 'vars';
 @import 'global';
 // Blocks
@@ -13,6 +14,7 @@
 @import 'parts/social';
 @import 'parts/slider-parts';
 @import 'parts/btn&link';
+@import 'parts/mobile-menu';
 @import 'parts/footer';
 // Sections
 @import 'sections/hero';

@@ -4,6 +4,17 @@
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: 67px;
+		@include r($dt) {
+			padding: 25px 0;
+		}
+
+		@include r($tl2) {
+			box-shadow: inset 0 0 0 260px rgba(249, 250, 255, 0.85);
+		}
+
+		@include r($tl) {
+			background-position: left;
+		}
 	}
 
 	&__content {
@@ -18,20 +29,30 @@
 	&__text {
 		opacity: 0.9;
 		margin-bottom: 30px;
+		@include r($pn) {
+			font-size: 16px;
+		}
 	}
 
 	&__list {
 		margin-bottom: 30px;
 	}
 
-	&__item:not(:last-child) {
-		margin-bottom: 20px;
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__item {
 		position: relative;
 		padding-left: 64px;
 		font-size: 24px;
+		@include r($tl) {
+			font-size: 18px;
+			padding-left: 44px;
+		}
+
 		&::before {
 			position: absolute;
 			content: "";
@@ -39,7 +60,7 @@
 			left: 0;
 			width: 34px;
 			height: 34px;
-			@extend %pseudo-mask;
+			@include pseudo-mask;
 		}
 
 		&--delivery::before {
@@ -58,8 +79,11 @@
 		}
 	}
 
-	&__btn {
+	&__link {
 		padding: 12px 32px;
 		font-size: 18px;
+		@include r($pn) {
+			font-size: 14px;
+		}
 	}
 }

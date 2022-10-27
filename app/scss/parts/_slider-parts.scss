@@ -52,7 +52,6 @@
 	height: 40px;
 	border: 3px solid $gray;
 	border-radius: 50%;
-	bottom: -3px;
 	transition: border-color 0.25s linear, background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 	outline: 0;
 	&::before {
@@ -61,7 +60,7 @@
 		width: 10px;
 		height: 18px;
 		top: 8px;
-		@extend %pseudo-mask;
+		@include pseudo-mask;
 		-webkit-mask-size: cover;
 		background-color: $gray;
 		transition: background-color 0.25s linear;
@@ -97,14 +96,6 @@
 	&__next::before {
 		-webkit-mask-image: url(../images/sprite.svg#icon-right);
 		left: 13px;
-	}
-
-	&__prev {
-		left: calc(50% - 113px);
-	}
-
-	&__next {
-		right: calc(50% - 113px);
 	}
 
 	&.slick-disabled {

@@ -54,6 +54,79 @@
 						</li>
 					</ul>
 
+					<button class="burger" type="button">
+						<span class="burger__line"></span>
+					</button>
+
+				</nav>
+
+				<nav class="menu mobile-menu">
+
+					<a class="logo mobile-menu__logo" href="#">
+						<img class="logo__img mobile-menu__logo-img" src="images/logo.svg" alt="Логотип" width="200" height="39">
+					</a>
+
+					<ul class="menu__list mobile-menu__list">
+						<li class="menu__item mobile-menu__item">
+							<a class="menu__link menu__link--active" href="#">Главная</a>
+						</li>
+						<li class="menu__item mobile-menu__item">
+							<a class="menu__link" href="#">Блюда</a>
+						</li>
+						<li class="menu__item mobile-menu__item">
+							<a class="menu__link" href="#">Контакты</a>
+						</li>
+					</ul>
+
+					<address class="contacts">
+						<ul class="contacts__list">
+							<li class="contacts__item">
+								<a class="contacts__link contacts__link--street" href="#">
+									<span class="sr-only">Наш адрес</span>
+									ул. Т.Г.Шевченко, 1
+								</a>
+							</li>
+							<li class="contacts__item">
+								<a class="contacts__link contacts__link--tel" href="tel:+380501112233">
+									<span class="sr-only">Наш номер телефона</span>
+									380501112233
+								</a>
+							</li>
+							<li class="contacts__item">
+								<a class="contacts__link contacts__link--email" href="mailto:support@sfood.com">
+									<span class="sr-only">Наша электронная почта</span>
+									support@sfood.com
+								</a>
+							</li>
+						</ul>
+
+						<ul class="social">
+							<li class="social__item">
+								<a class="social__link" href="#">
+									<span class="social__icon icon-mask"
+										style="-webkit-mask-image: url(images/sprite.svg#icon-facebook);"></span>
+									<span class="sr-only">Фейсбук</span>
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#">
+									<span class="social__icon icon-mask"
+										style="-webkit-mask-image: url(images/sprite.svg#icon-twitter);"></span>
+									<span class="sr-only">Твиттер</span>
+								</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#">
+									<span class="social__icon icon-mask"
+										style="-webkit-mask-image: url(images/sprite.svg#icon-instagram);"></span>
+									<span class="sr-only">Инстаграм</span>
+								</a>
+							</li>
+						</ul>
+					</address>
+
+					<button class="mobile-menu__btn" type="button"></button>
+
 				</nav>
 			</div>
 		</header>
@@ -251,14 +324,16 @@
 					<div class="features__wrapper" style="background-image: url(images/features-bg.png);">
 						<div class="features__content">
 							<h2 class="title features__title">Оставайтесь дома, а мы позаботимся о еде</h2>
-							<p class="features__text">У нас есть вкусная еда и мы готовы доставить её к вам домой! Воспользуйтесь
-								нашей доставкой прямо сейчас и получите скиидку!</p>
+							<div class="features__text">
+								<p>У нас есть вкусная еда и мы готовы доставить её к вам домой! Воспользуйтесь
+									нашей доставкой прямо сейчас и получите скиидку!</p>
+							</div>
 							<ul class="features__list">
 								<li class="features__item features__item--delivery">Быстрая доставка за 15 минут</li>
 								<li class="features__item features__item--couriers">Вежливые курьеры</li>
 								<li class="features__item features__item--restaurans">Более 500 заведений</li>
 							</ul>
-							<button class="orange-btn features__btn" type="button">Подробнее</button>
+							<a class="features__link orange-btn" href="#">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -276,11 +351,14 @@
 									<div class="rest-card__box">
 										<h3 class="rest-card__title">Blaze Pizza</h3>
 										<div class="rest-card__hours">
+											<span class="sr-only">Часы работы ресторана</span>
 											<span>11:00</span> - <span>22:00</span>
 										</div>
 									</div>
 								</a>
-								<a class="rest-card__link" href="#"></a>
+								<a class="rest-card__link" href="#">
+									<span class="sr-only">Страница ресторана</span>
+								</a>
 							</article>
 						</li>
 
@@ -291,11 +369,14 @@
 									<div class="rest-card__box">
 										<h3 class="rest-card__title">Pizza Runcho</h3>
 										<div class="rest-card__hours">
+											<span class="sr-only">Часы работы ресторана</span>
 											<span>12:00</span> - <span>21:00</span>
 										</div>
 									</div>
 								</a>
-								<a class="rest-card__link" href="#"></a>
+								<a class="rest-card__link" href="#">
+									<span class="sr-only">Страница ресторана</span>
+								</a>
 							</article>
 						</li>
 
@@ -306,11 +387,14 @@
 									<div class="rest-card__box">
 										<h3 class="rest-card__title">Pizza Hut</h3>
 										<div class="rest-card__hours">
+											<span class="sr-only">Часы работы ресторана</span>
 											<span>12:00</span> - <span>21:00</span>
 										</div>
 									</div>
 								</a>
-								<a class="rest-card__link" href="#"></a>
+								<a class="rest-card__link" href="#">
+									<span class="sr-only">Страница ресторана</span>
+								</a>
 							</article>
 						</li>
 
@@ -321,11 +405,14 @@
 									<div class="rest-card__box">
 										<h3 class="rest-card__title">McDonald`s</h3>
 										<div class="rest-card__hours">
+											<span class="sr-only">Часы работы ресторана</span>
 											<span>06:00</span> - <span>23:00</span>
 										</div>
 									</div>
 								</a>
-								<a class="rest-card__link" href="#"></a>
+								<a class="rest-card__link" href="#">
+									<span class="sr-only">Страница ресторана</span>
+								</a>
 							</article>
 						</li>
 
@@ -336,11 +423,14 @@
 									<div class="rest-card__box">
 										<h3 class="rest-card__title">KFC</h3>
 										<div class="rest-card__hours">
+											<span class="sr-only">Часы работы ресторана</span>
 											<span>06:00</span> - <span>23:00</span>
 										</div>
 									</div>
 								</a>
-								<a class="rest-card__link" href="#"></a>
+								<a class="rest-card__link" href="#">
+									<span class="sr-only">Страница ресторана</span>
+								</a>
 							</article>
 						</li>
 
@@ -351,11 +441,14 @@
 									<div class="rest-card__box">
 										<h3 class="rest-card__title">Star Burgers</h3>
 										<div class="rest-card__hours">
+											<span class="sr-only">Часы работы ресторана</span>
 											<span>09:00</span> - <span>21:00</span>
 										</div>
 									</div>
 								</a>
-								<a class="rest-card__link" href="#"></a>
+								<a class="rest-card__link" href="#">
+									<span class="sr-only">Страница ресторана</span>
+								</a>
 							</article>
 						</li>
 					</ul>
@@ -375,7 +468,7 @@
 										ресторанов в городе. Очень удобный сайт и приложение. Их доставщики очень вежливы и пунктуальны.
 										Компания часто проводит акции и дарит скидки на доставку - однозначно рекомендую!</blockquote>
 									<figcaption class="testimonials__name">
-										Дарья
+										<span>Дарья</span>
 										<span class="testimonials__span">Ценитель вкусной еды</span>
 									</figcaption>
 								</figure>
@@ -390,7 +483,7 @@
 										ресторанов в городе. Очень удобный сайт и приложение. Их доставщики очень вежливы и пунктуальны.
 										Компания часто проводит акции и дарит скидки на доставку - однозначно рекомендую!</blockquote>
 									<figcaption class="testimonials__name">
-										Дарья
+										<span>Дарья</span>
 										<span class="testimonials__span">Ценитель вкусной еды</span>
 									</figcaption>
 								</figure>
@@ -405,7 +498,7 @@
 										ресторанов в городе. Очень удобный сайт и приложение. Их доставщики очень вежливы и пунктуальны.
 										Компания часто проводит акции и дарит скидки на доставку - однозначно рекомендую!</blockquote>
 									<figcaption class="testimonials__name">
-										Дарья
+										<span>Дарья</span>
 										<span class="testimonials__span">Ценитель вкусной еды</span>
 									</figcaption>
 								</figure>
@@ -420,7 +513,7 @@
 										ресторанов в городе. Очень удобный сайт и приложение. Их доставщики очень вежливы и пунктуальны.
 										Компания часто проводит акции и дарит скидки на доставку - однозначно рекомендую!</blockquote>
 									<figcaption class="testimonials__name">
-										Дарья
+										<span>Дарья</span>
 										<span class="testimonials__span">Ценитель вкусной еды</span>
 									</figcaption>
 								</figure>
@@ -435,15 +528,19 @@
 				<div class="container">
 					<div class="download__wrapper" style="background-image: url(images/download-bg.jpg);">
 						<div class="download__content">
-							<h2 class="title">Скачайте мобильное приложение</h2>
+							<h2 class="title download__title">Скачайте мобильное приложение</h2>
 							<p class="download__text">Рестораны, которые вы любите - в ваших руках. Устанавливайте приложение и
 								заказывайте еду в любом удобном месте. </p>
 							<ul class="download__list">
 								<li class="download__item">
-									<a class="download__link download__link--astore" href="#"></a>
+									<a class="download__link download__link--astore" href="#">
+										<span class="sr-only">Скачать в Apple Store</span>
+									</a>
 								</li>
 								<li class="download__item">
-									<a class="download__link download__link--gplay" href="#"></a>
+									<a class="download__link download__link--gplay" href="#">
+										<span class="sr-only">Скачать в Google Play</span>
+									</a>
 								</li>
 							</ul>
 						</div>
@@ -504,7 +601,7 @@
 						</li>
 					</ul>
 
-					<address class="contacts">
+					<address class="contacts footer__contacts">
 						<ul class="contacts__list">
 							<li class="contacts__item">
 								<a class="contacts__link contacts__link--street" href="#">

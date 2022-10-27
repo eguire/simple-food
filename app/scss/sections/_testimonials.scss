@@ -4,11 +4,23 @@
 		width: 100%;
 		margin: 0 auto;
 		padding-bottom: 82px;
+		@include r($pn) {
+			padding-bottom: 0;
+		}
+	}
+
+	&__item {
+		@include r($pn) {
+			display: block;
+		}
 	}
 
 	&__title {
 		text-align: center;
 		margin-bottom: 50px;
+		@include r($tl) {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__img {
@@ -18,36 +30,62 @@
 		height: 100%;
 		margin-right: 40px;
 		border-radius: 50%;
+		@include r($tl) {
+			max-width: 100px;
+			max-height: 100px;
+			margin-right: 0;
+		}
+
+		@include r($pn) {
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
 	}
 
 	&__review {
 		max-width: 650px;
 		padding: 0 40px;
+		@include r($tl) {
+			padding: 9px 40px 0;
+		}
 	}
 
 	&__text {
 		position: relative;
 		font-style: italic;
 		margin-bottom: 30px;
+		@include r($tl) {
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
+
 		&::before,
 		&::after {
 			position: absolute;
 			content: "";
 			width: 24px;
 			height: 20px;
-			@extend %pseudo-mask;
+			@include pseudo-mask;
 			background-color: $gray;
 		}
 
 		&::before {
 			-webkit-mask-image: url(../images/sprite.svg#icon-quote-open);
 			left: -40px;
+			@include r($tl) {
+				left: -35px;
+				top: -10px;
+			}
 		}
 
 		&::after {
 			-webkit-mask-image: url(../images/sprite.svg#icon-quote-close);
 			bottom: 0;
 			right: -40px;
+			@include r($tl) {
+				bottom: 11px;
+				right: -35px;
+			}
 		}
 	}
 
@@ -55,6 +93,9 @@
 		font-weight: 500;
 		line-height: 1.3;
 		color: $orange-900;
+		@include r($tl) {
+			font-size: 16px;
+		}
 	}
 
 	&__span {
@@ -64,5 +105,29 @@
 		font-size: 14px;
 		line-height: 1.3;
 		font-weight: 400;
+		@include r($tl) {
+			margin-top: 10px;
+		}
+	}
+
+	&__arrow-prev {
+		left: calc(50% - 113px);
+		@include r($pn) {
+			left: 39px;
+		}
+	}
+
+	&__arrow-next {
+		right: calc(50% - 113px);
+		@include r($pn) {
+			right: 39px;
+		}
+	}
+
+	& .slider-nav {
+		bottom: -3px;
+		@include r($pn) {
+			top: 30px;
+		}
 	}
 }

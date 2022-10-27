@@ -1,0 +1,11 @@
+@mixin pseudo-mask($msize: contain, $mrepeat: no-repeat, $mpos: center){
+	-webkit-mask-size: $msize;
+	-webkit-mask-repeat: $mrepeat;
+	-webkit-mask-position: $mpos;
+}
+
+@mixin r($width) {
+	@media (max-width: #{$width}px) {
+		@content;
+	}
+}

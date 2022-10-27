@@ -2,15 +2,30 @@
 	&__wrapper {
 		display: flex;
 		padding-bottom: 60px;
+		@include r($dt) {
+			flex-wrap: wrap;
+			row-gap: 30px;
+		}
+
+		@include r($pn) {
+			flex-direction: column;
+		}
 	}
 
 	&__form {
 		max-width: 200px;
 		margin-right: 70px;
+		@include r($dt) {
+			order: -1;
+		}
 	}
 
 	&__logo {
 		margin-bottom: 30px;
+		& .logo__img {
+			min-width: 200px;
+			min-height: 39px;
+		}
 	}
 
 	&__input {
@@ -52,7 +67,7 @@
 			height: 14px;
 			content: "";
 			mask-image: url(../images/sprite.svg#icon-telegram);
-			@extend %pseudo-mask;
+			@include pseudo-mask;
 			background-color: $white;
 			transition: background-color 0.25s linear;
 		}
@@ -87,6 +102,17 @@
 		max-width: 570px;
 		margin-right: 70px;
 		column-gap: 70px;
+		@include r($dt) {
+			row-gap: 20px;
+		}
+
+		@include r($tl) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include r($pn) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 
 	&__item {
@@ -117,11 +143,20 @@
 		}
 	}
 
+	&__contacts {
+		@include r($dt) {
+			order: -1;
+		}
+	}
+
 	&__copy {
 		text-align: center;
 		padding: 29px 15px;
 		line-height: 1;
 		font-size: 14px;
 		border-top: 1px solid rgba($gray, 0.2);
+		@include r($tl) {
+			padding: 20px 15px;
+		}
 	}
 }

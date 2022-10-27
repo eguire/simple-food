@@ -1,10 +1,18 @@
 .download {
 	padding-bottom: 128px;
+	@include r($tl) {
+		padding-bottom: 0;
+	}
 	&__wrapper {
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: right;
 		padding: 42px 0;
+		@include r($dt) {
+			background-size: 0;
+			padding-top: 0;
+			padding-bottom: 40px;
+		}
 	}
 
 	&__content {
@@ -12,8 +20,19 @@
 		width: 100%;
 	}
 
+	&__title {
+		@include r($pn) {
+			margin-bottom: 15px;
+		}
+	}
+
 	&__text {
 		margin-bottom: 30px;
+		opacity: 0.9;
+		@include r($pn) {
+			margin-bottom: 15px;
+			font-size: 14px;
+		}
 	}
 
 	&__list {
@@ -24,8 +43,10 @@
 		line-height: 0;
 	}
 
-	&__item:not(:last-child) {
-		margin-right: 30px;
+	&__item {
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
 	}
 
 	&__link {

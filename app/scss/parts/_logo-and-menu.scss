@@ -3,6 +3,12 @@
 	border-radius: 5px;
 	transition: box-shadow 0.25s ease-in-out, opacity 0.25s ease-in-out;
 	outline: 0;
+	&__img {
+		@include r($tl) {
+			max-width: 115px;
+			max-height: 23px;
+		}
+	}
 	&:focus {
 		box-shadow: $outline;
 	}
@@ -21,15 +27,23 @@
 	&__logo {
 		margin-right: auto;
 		margin-left: 5px;
+		@include r($tl) {
+			margin-left: 0;
+		}
 	}
 
 	&__list {
 		display: flex;
 		margin-right: 50px;
+		@include r($tl) {
+			display: none;
+		}
 	}
 
-	&__item:not(:last-child) {
+	&__item {
+		&:not(:last-child) {
 		margin-right: 45px;
+		}
 	}
 
 	&__link {

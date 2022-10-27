@@ -5,6 +5,15 @@
 	border-radius: 10px;
 	background-color: $white;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease-in-out;
+	@include r($tl2) {
+		margin: 0 auto;
+	}
+
+	&:hover {
+		box-shadow: 0 3px 15px rgba(255, 104, 56, 0.5);
+	}
+
 	&__wrapper {
 		outline: 0;
 		transition: box-shadow 0.25s ease-in-out;
@@ -18,10 +27,18 @@
 		margin-bottom: 10px;
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
+		@include r($tl) {
+			width: 100%;
+			min-height: 300px;
+			margin-bottom: 15px;
+		}
 	}
 
 	&__box {
 		padding: 0 20px 20px;
+		@include r($pn) {
+			padding: 0 20px 22px;
+		}
 	}
 
 	&__title {
@@ -44,7 +61,7 @@
 			top: 3px;
 			width: 22px;
 			height: 22px;
-			@extend %pseudo-mask;
+			@include pseudo-mask;
 			-webkit-mask-image: url(../images/sprite.svg#icon-time);
 			background-color: $dark;
 		}
@@ -67,7 +84,7 @@
 			width: 14px;
 			height: 12px;
 			content: "";
-			@extend %pseudo-mask;
+			@include pseudo-mask;
 			background-color: $white;
 			-webkit-mask-image: url(../images/sprite.svg#icon-arrow-right);
 			transition: left 0.25s linear, background-color 0.25s ease-in-out;
