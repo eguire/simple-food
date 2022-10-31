@@ -1,0 +1,89 @@
+.pagination {
+	display: flex;
+	width: fit-content;
+	margin: 0 auto;
+	&__item {
+		&:not(:last-child) {
+			margin-right: 6px;
+		}
+
+		&:nth-child(3) {
+			@include r($tl) {
+				display: none;
+			}
+		}
+
+		&:nth-last-child(3) {
+			@include r($tl) {
+				display: none;
+			}
+		}
+	}
+
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 48px;
+		height: 48px;
+		font-size: 18px;
+		line-height: 1;
+		color: $dark-blue;
+		border: 1px solid #faeded;
+		border-radius: 3px;
+		background-color: #faeded;
+		outline: 0;
+		transition: all 0.3s ease-in-out;
+		&--active {
+			border-color: $dark-blue;
+		}
+
+		&:focus {
+			box-shadow: $outline;
+		}
+
+		&:hover {
+			background-color: $orange-900;
+			color: $white;
+			border-color: $orange-900;
+		}
+
+		&:hover::after {
+			background-color: $white;
+		}
+
+		&:active {
+			box-shadow: inset 0 -1px 4px 2px rgba(0, 0, 0, 0.15);
+			background-color: #faeded;
+			color: $dark-blue;
+		}
+	}
+
+	&__arrow {
+		position: relative;
+		&::after {
+			position: absolute;
+			content: "";
+			width: 10px;
+			height: 18px;
+			@include pseudo-mask;
+			mask-image: url(../../images/sprite.svg#icon-chevron);
+			mask-size: cover;
+			background-color: $dark-blue;
+			transition: background-color 0.3s linear;
+		}
+
+		&--prev {
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+
+		&--disabled {
+			pointer-events: none;
+			&::after {
+				background-color: $gray;
+			}
+		}
+	}
+}

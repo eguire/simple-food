@@ -32,11 +32,11 @@
 		}
 
 		&--search::before {
-			-webkit-mask-image: url(../images/sprite.svg#icon-search);
+			-webkit-mask-image: url(../../images/sprite.svg#icon-search);
 		}
 
 		&--cart::before {
-			-webkit-mask-image: url(../images/sprite.svg#icon-cart);
+			-webkit-mask-image: url(../../images/sprite.svg#icon-cart);
 		}
 
 		&:focus {

@@ -89,12 +89,12 @@
 	}
 
 	&__prev::before {
-		-webkit-mask-image: url(../images/sprite.svg#icon-left);
+		-webkit-mask-image: url(../../images/sprite.svg#icon-left);
 		left: 11px;
 	}
 
 	&__next::before {
-		-webkit-mask-image: url(../images/sprite.svg#icon-right);
+		-webkit-mask-image: url(../../images/sprite.svg#icon-right);
 		left: 13px;
 	}
 

@@ -8,6 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const svgSprite = require('gulp-svg-sprite');
+const fileInclude = require('gulp-file-include');
 
 function svgSprites() {
 	return src('app/images/icons/*.svg')
@@ -21,6 +22,16 @@ function svgSprites() {
 			})
 		)
 		.pipe(dest('app/images'));
+}
+
+const htmlInclude = () => {
+  return src(['app/html/*.html'])
+  .pipe(fileInclude({
+    prefix: '@',
+    basepath: '@file',
+  }))
+  .pipe(dest('app'))
+  .pipe(browserSync.stream());
 }
 
 function browsersync (){
@@ -57,6 +68,7 @@ function scripts() {
 	return src([
 		'node_modules/jquery/dist/jquery.js',
 		'node_modules/mixitup/dist/mixitup.min.js',
+		'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
 		'node_modules/slick-carousel/slick/slick.min.js',
 		'app/js/main.js'
 	])
@@ -92,6 +104,7 @@ function watching(){
 	watch(['app/images/icons/*.svg'], svgSprites);
 	watch(['app/scss/**/*.scss'], styles);
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
+	watch(['app/html/**/*.html'], htmlInclude);
 	watch(['app/*.html']).on('change', browserSync.reload);
 }
 
@@ -102,6 +115,7 @@ exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.svgSprites = svgSprites;
+exports.htmlInclude = htmlInclude;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(svgSprites, styles, scripts, browsersync, watching);
+exports.default = parallel(svgSprites, htmlInclude, styles, scripts, browsersync, watching);

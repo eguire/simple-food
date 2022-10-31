@@ -1,0 +1,29 @@
+.irs--flat {
+	height: fit-content;
+}
+
+.irs--flat .irs-line {
+	top: 0;
+	height: 2px;
+	background-color: $gray;
+}
+
+.irs--flat .irs-bar {
+	top: 0;
+	height: 2px;
+	background-color: $orange-900;
+}
+
+.irs--flat .irs-handle {
+	top: -8px;
+	width: 18px;
+	height: 18px;
+	background-color: $orange-900;
+	border-radius: 50%;
+}
+
+.irs--flat .irs-handle>i:first-child {
+	width: 0;
+	height: 0;
+	background-color: transparent;
+}

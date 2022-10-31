@@ -1,5 +1,6 @@
 @import 'reset';
 @import '../../node_modules/slick-carousel/slick/slick';
+@import '../../node_modules/ion-rangeslider/css/ion.rangeSlider';
 @import 'fonts';
 @import 'mixins';
 @import 'vars';
@@ -15,6 +16,10 @@
 @import 'parts/slider-parts';
 @import 'parts/btn&link';
 @import 'parts/mobile-menu';
+@import 'parts/breadcrumbs';
+@import 'parts/filters';
+@import 'parts/range-slider';
+@import 'parts/pagination';
 @import 'parts/footer';
 // Sections
 @import 'sections/hero';
@@ -23,3 +28,5 @@
 @import 'sections/restaurant';
 @import 'sections/testimonials';
 @import 'sections/download';
+@import 'sections/catalog';
+@import 'sections/sales';

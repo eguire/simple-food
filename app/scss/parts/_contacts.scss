@@ -18,32 +18,29 @@
 		font-size: 16px;
 		line-height: 2;
 		outline: 0;
-		transition: box-shadow 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
+		@include link-status;
 		&::before {
 			position: absolute;
 			left: 0;
-			top: 3px;
+			top: 6px;
 			content: "";
-			width: 24px;
-			height: 24px;
+			width: 22px;
+			height: 20px;
 			@include pseudo-mask;
-			background-color: $black;
+			background-color: $dark;
 		}
 
 		&--street::before {
-			-webkit-mask-image: url(../images/sprite.svg#icon-location);
+			mask-image: url(../../images/sprite.svg#icon-location);
 		}
 
 		&--tel::before {
-			-webkit-mask-image: url(../images/sprite.svg#icon-call);
+			mask-image: url(../../images/sprite.svg#icon-call);
 		}
 
 		&--email::before {
-			-webkit-mask-image: url(../images/sprite.svg#icon-message);
-		}
-
-		&:focus {
-			box-shadow: $outline;
+			mask-image: url(../../images/sprite.svg#icon-message);
 		}
 	}
 }

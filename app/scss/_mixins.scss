@@ -1,11 +1,27 @@
 @mixin pseudo-mask($msize: contain, $mrepeat: no-repeat, $mpos: center){
-	-webkit-mask-size: $msize;
-	-webkit-mask-repeat: $mrepeat;
-	-webkit-mask-position: $mpos;
+	mask-size: $msize;
+	mask-repeat: $mrepeat;
+	mask-position: $mpos;
 }
 
 @mixin r($width) {
 	@media (max-width: #{$width}px) {
 		@content;
+	}
+}
+
+@mixin link-status() {
+	&:focus {
+		box-shadow: $outline;
+	}
+
+	&:hover {
+		color: $orange-900;
+	}
+
+	&:active {
+		text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+		color: $dark;
+		box-shadow: none;
 	}
 }

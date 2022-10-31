@@ -62,7 +62,7 @@
 			width: 22px;
 			height: 22px;
 			@include pseudo-mask;
-			-webkit-mask-image: url(../images/sprite.svg#icon-time);
+			-webkit-mask-image: url(../../images/sprite.svg#icon-time);
 			background-color: $dark;
 		}
 	}
@@ -86,7 +86,7 @@
 			content: "";
 			@include pseudo-mask;
 			background-color: $white;
-			-webkit-mask-image: url(../images/sprite.svg#icon-arrow-right);
+			-webkit-mask-image: url(../../images/sprite.svg#icon-arrow-right);
 			transition: left 0.25s linear, background-color 0.25s ease-in-out;
 		}
 
