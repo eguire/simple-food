@@ -7,14 +7,21 @@
 			flex-wrap: wrap;
 			row-gap: 20px;
 			margin-bottom: 22px;
+			justify-content: flex-start;
 		}
 	}
 
 	&__title {
 		margin-bottom: 0;
+		@include r ($pn) {
+			width: 100%;
+		}
 	}
 
 	&__btn {
+		display: none;
+		margin-left: auto;
+		margin-right: 10px;
 		width: 47px;
 		height: 47px;
 		background-color: #faeded;
@@ -25,6 +32,14 @@
 		background-repeat: no-repeat;
 		outline: 0;
 		transition: box-shadow 0.3s ease-in-out;
+		@include r($tl) {
+			display: block;
+		}
+
+		@include r($pn) {
+			margin-left: 0;
+		}
+
 		&:focus {
 			box-shadow: $outline;
 		}
@@ -40,17 +55,6 @@
 			margin-right: 10px;
 		}
 
-		&--filter {
-			display: none;
-			@include r($tl) {
-				display: block;
-			}
-
-			&::after {
-				display: none;
-			}
-		}
-		
 		&::after {
 			position: absolute;
 			right: 18px;
@@ -78,6 +82,8 @@
 		outline: 0;
 		font-size: 14px;
 		line-height: 1.2;
+
+		background-color: $white;
 		border: 1px solid $gray;
 		border-radius: 3px;
 		transition: border-color 0.3s linear, color 0.3s ease-in-out;
@@ -125,6 +131,7 @@
 
 		&--active {
 			transform: translateX(0);
+			z-index: 12;
 		}
 	}
 

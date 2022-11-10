@@ -1,6 +1,7 @@
 @import 'reset';
 @import '../../node_modules/slick-carousel/slick/slick';
 @import '../../node_modules/ion-rangeslider/css/ion.rangeSlider';
+@import '../../node_modules/rateyo/src/jquery.rateyo';
 @import 'fonts';
 @import 'mixins';
 @import 'vars';
@@ -20,6 +21,7 @@
 @import 'parts/filters';
 @import 'parts/range-slider';
 @import 'parts/pagination';
+@import 'parts/reviews';
 @import 'parts/footer';
 // Sections
 @import 'sections/hero';
@@ -30,3 +32,5 @@
 @import 'sections/download';
 @import 'sections/catalog';
 @import 'sections/sales';
+@import 'sections/product';
+@import 'sections/sapid';

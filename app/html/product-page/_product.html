@@ -1,0 +1,182 @@
+<section class="product section-padding">
+	<h1 class="sr-only">Страница товара</h1>
+	<div class="container">
+		<div class="product__wrapper">
+
+			<div class="product__holder">
+				<button class="product__close-btn" type="button"></button>
+				<ul class="product__slider">
+					<li class="product__item">
+						<div class="product__box">
+							<img class="product__img" src="images/product-images/burger-1.jpg" alt="Бургер" width="400" height="400">
+						</div>
+					</li>
+					<li class="product__item">
+						<div class="product__box">
+							<img class="product__img" src="images/product-images/burger-1.jpg" alt="Бургер" width="400" height="400">
+						</div>
+					</li>
+					<li class="product__item">
+						<div class="product__box">
+							<img class="product__img" src="images/product-images/burger-1.jpg" alt="Бургер" width="400" height="400">
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="product__info">
+				<h2 class="title product__title">Чизбургер с листьями салата</h2>
+				<div class="product__rating" data-rateyo-rating="4"><span class="sr-only">Рейтинг продукта</span></div>
+				<div class="product__price">160 <span>грн.</span></div>
+
+				<form class="product__buy flex-centered">
+					<label class="product__counter" for="product__incrementer">
+						<span class="sr-only">Количество товара</span>
+						<button class="product__counter-minus" type="button">
+							<span class="sr-only">Уменьшить количество товара</span>
+						</button>
+						<input class="product__incrementer" type="number" id="product__incrementer" name="product__incrementer" required min="1" value="1">
+						<button class="product__counter-plus" type="button">
+							<span class="sr-only">Увеличить количество товара</span>
+						</button>
+					</label>
+					<button class="product__btn orange-btn" type="button">Добавить в корзину</button>
+				</form>
+
+				<h3 class="product__delivery-title">Доставка и оплата</h3>
+				<ul class="product__delivery-list">
+					<li class="product__delivery-item">Минимальная сумма заказа — 160 грн.</li>
+					<li class="product__delivery-item">Время доставки заказа — 80-140 мин.</li>
+					<li class="product__delivery-item">Оплата осуществляется только банковской картой.</li>
+					<li class="product__delivery-item">Окончательная сумма заказа формируется после сбора товаров.</li>
+				</ul>
+				<a class="product__show-more show-more" href="#">Подробнее</a>
+			</div>
+		</div>
+		</div>
+
+		<div class="product__line"></div>
+
+		<div class="container">
+		<div class="product__container">
+			<ul class="product__tabs">
+				<li class="product__tabs-item">
+					<a class="product__tabs-link" href="#product-tab1">Описание</a>
+				</li>
+				<li class="product__tabs-item">
+					<a class="product__tabs-link" href="#product-tab2">Характеристики</a>
+				</li>
+				<li class="product__tabs-item">
+					<a class="product__tabs-link" href="#product-tab3">Отзывы (<span>2</span>)</a>
+				</li>
+			</ul>
+
+			<div class="product__tabs-holder">
+				<div class="product__tabs-content" id="product-tab1">
+					<ul class="product__description">
+						<li class="product__text">
+							<p>Рубленый бифштекс из натуральной говядины на карамелизованной булочке, с ломтиком сыра «Чеддер», кетчупом, горчицей, луком и маринованными огурчиками.</p>
+						</li>
+						<li class="product__text">
+							<p>Аллергены: Глютен, Молоко, Горчица, Может содержать сою, яйцо, следы кунжута</p>
+						</li>
+						<li class="product__text">
+							<p>Внешний вид товара может отличаться от изображений, представленных на сайте.</p>
+						</li>
+					</ul>
+				</div>
+
+				<div class="product__tabs-content" id="product-tab2">
+					<ul class="product__features">
+						<li class="product__feature">
+							<div class="product__characteristic">
+								Диаметр: 
+								<span>20 см</span>
+							</div>
+						</li>
+						<li class="product__feature">
+							<div class="product__characteristic">
+								Вес: 
+								<span>300 гр</span>
+							</div>
+						</li>
+						<li class="product__feature">
+							<div class="product__characteristic">
+								Калорийность (на 100г): 
+								<span>295 ккал</span>
+							</div>
+						</li>
+						<li class="product__feature">
+							<div class="product__characteristic">
+								Срок хранения: 
+								<span>до 3 дней</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="product__tabs-content" id="product-tab3">
+					<div class="reviews">
+
+						<h3 class="reviews__title">Мнения наших клиентов</h3>
+						<ul class="reviews__list">
+							<li class="reviews__item">
+								<figure>
+									<figcaption class="reviews__head">
+										<img class="reviews__avatar" src="images/user-avatars/avatar-1.jpg" alt="Аватарка пользователя" width="70" height="70">
+										<div class="reviews__info">
+											<span class="reviews__name">Андрей</span>
+											<time class="reviews__date" datetime="10.06.2021">10.06.2021</time>
+										</div>
+										<div class="reviews__rate" data-rateyo-rating="5"><span class="sr-only">Оценка товара пользователем</span></div>
+									</figcaption>
+									<blockquote class="reviews__text">Доставили быстро. Товар свежий и очень вкусный, буду пробовать еще!))</blockquote>
+								</figure>
+							</li>
+							<li class="reviews__item">
+								<figure>
+									<figcaption class="reviews__head">
+										<img class="reviews__avatar" src="images/user-avatars/avatar-1.jpg" alt="Аватарка пользователя" width="70" height="70">
+										<div class="reviews__info">
+											<span class="reviews__name">Екатерина Белая</span>
+											<time class="reviews__date" datetime="7.06.2021">7.06.2021</time>
+										</div>
+										<div class="reviews__rate" data-rateyo-rating="4"><span class="sr-only">Оценка товара пользователем</span></div>
+									</figcaption>
+									<blockquote class="reviews__text">этот бургер неплохой чтобы перекусить, когда нет возможности или времени что-нибудь приготовить. Это отличный вариант, чтобы съесть на ходу, но чтобы побаловать себя, я больше предпочту пиццу</blockquote>
+								</figure>
+							</li>
+						</ul>
+
+						<h3 class="reviews__title">Оставить отзыв</h3>
+						<form class="reviews__form">
+							<div class="reviews__form-top">
+								<span class="reviews__your-rate">Ваша оценка *</span>
+								<div class="reviews__form-stars"></div>
+							</div>
+							<div class="reviews__wrapper">
+								<div class="reviews__part reviews__part--textarea">
+									<label class="reviews__label" for="reviews__textarea">Ваш отзыв *</label>
+									<textarea class="reviews__input reviews__input--textarea" name="reviews__textarea" id="reviews__textarea" placeholder="Введите текст отзыва" required></textarea>
+								</div>
+								<div class="reviews__part">
+									<label class="reviews__label" for="reviews__input">Имя</label>
+									<input class="reviews__input" type="text" id="reviews__input" placeholder="Введите ваше имя">
+								</div>
+								<div class="reviews__part reviews__part--email">
+									<label class="reviews__label" for="reviews__email">Email *</label>
+									<input class="reviews__input" type="email" id="reviews__email" placeholder="youremail@mail.com" required>
+								</div>
+							</div>
+							<div class="reviews__save">
+								<input class="reviews__checkbox" type="checkbox" id="reviews__checkbox" name="reviews__checkbox">
+								<label class="reviews__save-text" for="reviews__checkbox">Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.</label>
+							</div>
+							<button class="reviews__btn orange-btn" type="submit">Оставить отзыв</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

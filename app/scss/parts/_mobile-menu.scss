@@ -10,7 +10,7 @@
 	padding: 25px 15px;
 	background-color: $white;
 	transition: transform 0.25s linear;
-	box-shadow: 0 0 0 80px rgba(0, 0, 0, 0.5);
+	
 	@include r($tl) {
 		display: block;
 	}

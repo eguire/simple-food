@@ -1,20 +1,21 @@
 <section class="catalog section-padding">
 	<div class="container">
+		<h1 class="sr-only">Наши товары</h1>
 		<div class="catalog__top">
 			<h2 class="title catalog__title">Каталог продуктов</h2>
+			<button class="catalog__btn" type="button"><span class="sr-only">Открыть фильтры</span></button>
 			<ul class="catalog__settings">
-				<li class="catalog__setting catalog__setting--filter">
-					<button class="catalog__btn" type="button"></button>
-				</li>
 				<li class="catalog__setting">
-					<select class="catalog__select">
+					<label for="catalog__view" class="sr-only">Отобразить товары</label>
+					<select class="catalog__select" id="catalog__view" name="catalog__view">
 						<option value="name">По названию</option>
 						<option value="rate">По рейтингу</option>
 						<option value="price">По цене</option>
 					</select>
 				</li>
 				<li class="catalog__setting">
-					<select class="catalog__select">
+					<label for="catalog__amount" class="sr-only">Отобразить число товаров</label>
+					<select class="catalog__select" id="catalog__amount" name="catalog__amount">
 						<option value="12">по 12</option>
 						<option value="10">по 10</option>
 						<option value="8">по 8</option>
@@ -24,8 +25,9 @@
 		</div>
 
 		<div class="catalog__wrapper">
-			<aside class="catalog__aside">
-				<button class="filters__btn" type="button"></button>
+			<div class="catalog__aside">
+				<h2 class="sr-only">Сортировка продуктов</h2>
+				<button class="filters__btn" type="button"><span class="sr-only">Закрыть фильтры</span></button>
 				<ul class="filters">
 					<li class="filters__item">
 						<h3 class="filters__title">Категории</h3>
@@ -92,7 +94,7 @@
 						<input type="text" class="filters__range-slider" name="my_range">
 					</li>
 				</ul>
-			</aside>
+			</div>
 
 			<div>
 				<ul class="catalog__list">
@@ -220,7 +222,7 @@
 
 				<ul class="pagination">
 					<li class="pagination__item">
-						<a class="pagination__link pagination__arrow pagination__arrow--prev pagination__arrow--disabled" href="#"></a>
+						<a class="pagination__link pagination__link--arrow pagination__link--prev pagination__link--disabled" href="#"></a>
 					</li>
 					<li class="pagination__item">
 						<a class="pagination__link pagination__link--active" href="#">1</a>
@@ -238,7 +240,7 @@
 						<a class="pagination__link" href="#">10</a>
 					</li>
 					<li class="pagination__item">
-						<a class="pagination__link pagination__arrow pagination__arrow--next" href="#"></a>
+						<a class="pagination__link pagination__link--arrow pagination__link--next" href="#"></a>
 					</li>
 				</ul>
 

@@ -1,0 +1,52 @@
+.sapid {
+
+	&__title {
+		margin-bottom: 60px;
+
+		@include r($tl) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__slider {
+
+		@include r($tl) {
+			padding-bottom: 45px;
+		}
+
+		& .slick-list {
+			margin-right: -30px;
+
+			@include r($tl2) {
+				margin-right: -5px;
+			}
+		}
+
+		& .slick-dots {
+			
+			@include r($tl) {
+				bottom: 0;
+			}
+		}
+	}
+
+	&__item {
+		padding: 2px 2px;
+		margin-right: 30px;
+		@include r($tl2) {
+			margin-right: 5px;
+		}
+	}
+
+	& .slider-nav {
+		top: -102px;
+	}
+
+	& .slider-nav__prev {
+		right: 42px;
+	}
+
+	& .slider-nav__next {
+		right: -13px;
+	}
+}

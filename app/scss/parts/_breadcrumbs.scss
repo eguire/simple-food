@@ -36,5 +36,9 @@
 		color: #505050;
 		font-size: 14px;
 		line-height: 1.2;
+		border-radius: 3px;
+		transition: box-shadow 0.3s, color 0.3s;
+		outline: 0;
+		@include link-status;
 	}
 }

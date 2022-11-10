@@ -1,0 +1,17 @@
+@include('parts/_head.html', {
+	"pageTitle": "Сраница товара"
+})
+	<div class="wrapper">
+		@include('parts/_header.html')
+
+		<main class="main">
+			@include('parts/_breadcrumbs.html')
+
+			@include('product-page/_product.html')
+
+			@include('product-page/_sapid.html')
+		</main>
+
+		@include('parts/_footer.html')
+	</div>
+@include('parts/_footer-scripts.html')

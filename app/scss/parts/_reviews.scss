@@ -1,0 +1,217 @@
+.reviews {
+	color: #505050;
+
+	&__title {
+		margin-bottom: 30px;
+
+		font-size: 24px;
+		line-height: 1.2;
+		font-weight: 500;
+		letter-spacing: 0.03em;
+		color: $dark-blue;
+
+		@include r($pn) {
+			font-size: 20px;
+		}
+	}
+
+	&__list {
+		margin-bottom: 60px;
+
+		@include r($pn) {
+			margin-bottom: 45px;
+		}
+	}
+
+	&__item {
+
+		&:not(:last-child) {
+			padding-bottom: 20px;
+			margin-bottom: 25px;
+
+			border-bottom: 1px solid #E4E4E4;
+
+			@include r($pn) {
+				margin-bottom: 15px;
+				padding-bottom: 15px;
+			}
+		}
+	}
+
+	&__head {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+
+		@include r($pn) {
+			flex-wrap: wrap;
+			row-gap: 15px;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__avatar {
+		display: block;
+		width: 70px;
+		height: 70px;
+		margin-right: 25px;
+
+		border-radius: 50%;
+	}
+
+	&__info {
+		margin-right: auto;
+	}
+
+	&__name {
+		display: block;
+		margin-bottom: 10px;
+
+		font-weight: 500;
+	}
+
+	&__date {
+		font-size: 18px;
+		line-height: 1.3;
+		letter-spacing: 0.03em;
+	}
+
+	&__text {
+		@include r($pn) {
+			font-size: 16px;
+		}
+	}
+
+	&__form-top {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+
+	&__your-rate {
+		margin-right: 15px;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 400px 260px;
+		grid-template-rows: repeat(2, 1fr);
+		column-gap: 30px;
+		margin-bottom: 30px;
+
+		@include r($tl) {
+			display: flex;
+			flex-direction: column;
+			row-gap: 20px;
+		}
+	}
+
+	&__part {
+		
+		&--textarea {
+			grid-column: 1 / 2;
+			grid-row: 1 / 3;
+		}
+
+		&--email {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+		}
+	}
+
+	&__label {
+		display: block;
+		margin-bottom: 15px;
+
+		line-height: 1.3;
+	}
+
+	&__input {
+		width: 100%;
+		padding: 16px 18px;
+
+		background-color: $white;
+		border: 1px solid $gray;
+		border-radius: 5px;
+		outline: 0;
+
+		font-size: 16px;
+		line-height: 1.3;
+
+		transition: box-shadow 0.3s ease-in-out;
+
+		&::placeholder {
+			color: #c1c1c1;
+		}
+
+		&--textarea {
+			resize: none;
+			height: 165px;
+		}
+
+		&:focus {
+			box-shadow: $outline;
+		}
+	}
+
+	&__save {
+		position: relative;
+
+		padding-left: 34px;
+		margin-bottom: 30px;
+	}
+
+	&__checkbox {
+		position: absolute;
+		appearance: none;
+
+		&:checked + .reviews__save-text::after {
+			opacity: 1;
+		}
+	}
+
+	&__save-text {
+		font-size: 18px;
+		line-height: 1.3;
+
+		cursor: pointer;
+
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 4px;
+			content: "";
+
+			width: 24px;
+			height: 24px;
+
+			background-color: $white;
+			border: 1px solid #C1C1C1;
+			border-radius: 3px;
+		}
+
+		&::after {
+			position: absolute;
+			content: "";
+			left: 5px;
+			top: 8px;
+
+			width: 16px;
+			height: 16px;
+
+			@include pseudo-mask;
+			mask-image: url('/images/sprite.svg#checked');
+			background-color: $dark-blue;
+			opacity: 0;
+			transition: opacity 0.2s linear;
+		}
+	}
+
+	&__btn {
+		padding: 12px 32px;
+
+		font-size: 18px;
+		line-height: 1.3;
+		letter-spacing: 0.03em;
+	}
+}
