@@ -62,7 +62,7 @@
 			width: 22px;
 			height: 22px;
 			@include pseudo-mask;
-			-webkit-mask-image: url(../../images/sprite.svg#icon-time);
+			mask-image: url('../images/sprite.svg#icon-time');
 			background-color: $dark;
 		}
 	}

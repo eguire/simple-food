@@ -48,7 +48,7 @@
 				width: 10px;
 				height: 18px;
 				@include pseudo-mask;
-				mask-image: url(../../images/sprite.svg#icon-chevron);
+				mask-image: url('../images/sprite.svg#icon-chevron');
 				mask-size: cover;
 				background-color: $dark-blue;
 				transition: background-color 0.3s linear;

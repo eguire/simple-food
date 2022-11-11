@@ -61,7 +61,7 @@
 		height: 18px;
 		top: 8px;
 		@include pseudo-mask;
-		-webkit-mask-size: cover;
+		mask-size: cover;
 		background-color: $gray;
 		transition: background-color 0.25s linear;
 	}
@@ -89,12 +89,12 @@
 	}
 
 	&__prev::before {
-		-webkit-mask-image: url(../../images/sprite.svg#icon-left);
+		mask-image: url('../images/sprite.svg#icon-left');
 		left: 11px;
 	}
 
 	&__next::before {
-		-webkit-mask-image: url(../../images/sprite.svg#icon-right);
+		mask-image: url('../images/sprite.svg#icon-right');
 		left: 13px;
 	}
 

@@ -69,7 +69,7 @@
 			width: 15px;
 			height: 14px;
 			content: "";
-			mask-image: url(../../images/sprite.svg#icon-telegram);
+			mask-image: url('../images/sprite.svg#icon-telegram');
 			@include pseudo-mask;
 			background-color: $white;
 			transition: background-color 0.25s linear;

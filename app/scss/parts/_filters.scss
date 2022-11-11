@@ -96,7 +96,7 @@
 			width: 12px;
 			height: 8px;
 			@include pseudo-mask;
-			mask-image: url(../../images/sprite.svg#checked);
+			mask-image: url('../images/sprite.svg#checked');
 			mask-size: cover;
 			background-color: $dark-blue;
 			opacity: 0;

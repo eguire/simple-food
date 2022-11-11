@@ -70,7 +70,7 @@
 		}
 
 		&::before {
-			-webkit-mask-image: url(../images/sprite.svg#icon-quote-open);
+			mask-image: url('../images/sprite.svg#icon-quote-open');
 			left: -40px;
 			@include r($tl) {
 				left: -35px;
@@ -79,7 +79,7 @@
 		}
 
 		&::after {
-			-webkit-mask-image: url(../images/sprite.svg#icon-quote-close);
+			mask-image: url('../images/sprite.svg#icon-quote-close');
 			bottom: 0;
 			right: -40px;
 			@include r($tl) {

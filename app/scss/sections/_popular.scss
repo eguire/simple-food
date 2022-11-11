@@ -51,9 +51,9 @@
 			width: 44px;
 			height: 44px;
 			background-color: $dark;
-			-webkit-mask-repeat: no-repeat;
-			-webkit-mask-size: contain;
-			-webkit-mask-position: center;
+			mask-repeat: no-repeat;
+			mask-size: contain;
+			mask-position: center;
 			transition: background-color 0.25s linear;
 			@include r($dt) {
 				top: 10px;
@@ -64,23 +64,23 @@
 		}
 
 		&--burger::before {
-			-webkit-mask-image: url(../images/sprite.svg#icon-category-burger);
+			mask-image: url('../images/sprite.svg#icon-category-burger');
 		}
 
 		&--pizza::before {
-			-webkit-mask-image: url(../images/sprite.svg#icon-category-pizza);
+			mask-image: url('../images/sprite.svg#icon-category-pizza');
 		}
 
 		&--sandvich::before {
-			-webkit-mask-image: url(../images/sprite.svg#icon-category-sandvich);
+			mask-image: url('../images/sprite.svg#icon-category-sandvich');
 		}
 
 		&--asia::before {
-			-webkit-mask-image: url(../images/sprite.svg#icon-category-asia);
+			mask-image: url('../images/sprite.svg#icon-category-asia');
 		}
 
 		&--dish::before {
-			-webkit-mask-image: url(../images/sprite.svg#icon-category-dish);
+			mask-image: url('../images/sprite.svg#icon-category-dish');
 		}
 
 		&.mixitup-control-active {

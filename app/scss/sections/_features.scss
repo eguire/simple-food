@@ -64,17 +64,17 @@
 		}
 
 		&--delivery::before {
-			-webkit-mask-image: url(../images/sprite.svg#icon-timer);
+			mask-image: url('../images/sprite.svg#icon-timer');
 			background-color: $orange-900;
 		}
 
 		&--couriers::before {
-			-webkit-mask-image: url(../images/sprite.svg#icon-delivery);
+			mask-image: url('../images/sprite.svg#icon-delivery');
 			background-color: #00AAFF;
 		}
 
 		&--restaurans::before {
-			-webkit-mask-image: url(../images/sprite.svg#icon-restorant);
+			mask-image: url('../images/sprite.svg#icon-restorant');
 			background-color: #FF2222;
 		}
 	}

@@ -32,15 +32,15 @@
 		}
 
 		&--street::before {
-			mask-image: url(../../images/sprite.svg#icon-location);
+			mask-image: url('../images/sprite.svg#icon-location');
 		}
 
 		&--tel::before {
-			mask-image: url(../../images/sprite.svg#icon-call);
+			mask-image: url('../images/sprite.svg#icon-call');
 		}
 
 		&--email::before {
-			mask-image: url(../../images/sprite.svg#icon-message);
+			mask-image: url('../images/sprite.svg#icon-message');
 		}
 	}
 }
